@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="My Automation Test">
+	<parameter name="browser" value="Chrome" />
+	<test name="Verify recharge cellular">
+		<classes>
+			<class name="Undostres.undostres.automation.mytest" />
+		</classes>
+	</test>
+</suite>

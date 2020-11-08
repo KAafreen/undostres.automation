@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [My Automation Test]">
+  <parameter name="browser" value="Chrome"/>
+  <test name="Verify recharge cellular(failed)">
+    <classes>
+      <class name="Undostres.undostres.automation.mytest">
+        <methods>
+          <include name="suitSetUp"/>
+          <include name="testq"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Undostres.undostres.automation.mytest -->
+    </classes>
+  </test> <!-- Verify recharge cellular(failed) -->
+</suite> <!-- Failed suite [My Automation Test] -->

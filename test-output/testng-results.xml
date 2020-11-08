@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="My Automation Test" duration-ms="39269" started-at="2020-11-08T15:28:09Z" finished-at="2020-11-08T15:28:48Z">
+    <groups>
+    </groups>
+    <test name="Verify recharge cellular" duration-ms="39269" started-at="2020-11-08T15:28:09Z" finished-at="2020-11-08T15:28:48Z">
+      <class name="Undostres.undostres.automation.mytest">
+        <test-method status="PASS" signature="suitSetUp(java.lang.String)[pri:0, instance:Undostres.undostres.automation.mytest@6767c1fc]" name="suitSetUp" is-config="true" duration-ms="11520" started-at="2020-11-08T20:58:09Z" finished-at="2020-11-08T20:58:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suitSetUp -->
+        <test-method status="PASS" signature="testq()[pri:0, instance:Undostres.undostres.automation.mytest@6767c1fc]" name="testq" duration-ms="27016" started-at="2020-11-08T20:58:20Z" finished-at="2020-11-08T20:58:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testq -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Undostres.undostres.automation.mytest@6767c1fc]" name="tearDown" is-config="true" duration-ms="717" started-at="2020-11-08T20:58:47Z" finished-at="2020-11-08T20:58:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Undostres.undostres.automation.mytest -->
+    </test> <!-- Verify recharge cellular -->
+  </suite> <!-- My Automation Test -->
+</testng-results>

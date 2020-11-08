@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [my test]">
+  <test name="name(failed)">
+    <classes>
+      <class name="Undostres.undostres.automation.mytest">
+        <methods>
+          <include name="suitSetUp"/>
+          <include name="testq"/>
+        </methods>
+      </class> <!-- Undostres.undostres.automation.mytest -->
+    </classes>
+  </test> <!-- name(failed) -->
+</suite> <!-- Failed suite [my test] -->
