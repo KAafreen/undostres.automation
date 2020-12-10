@@ -1,27 +1,19 @@
 package com.selenium.utils;
 
-import java.awt.AWTException;
-import java.awt.Robot;
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.sun.glass.events.KeyEvent;
 
 /**
  * Class contains all webdriver element methods like click, wait, sendkeys etc.
@@ -31,8 +23,8 @@ import com.sun.glass.events.KeyEvent;
 
 public class ElementOperations extends BrowserFeatures {
 	private Select select;
-	public static final int DEFAULT_TIMEOUT = 20000;
-	public static final int DEFAULT_POLLING = 5000;
+	public static final int DEFAULT_TIMEOUT = 2;
+	public static final int DEFAULT_POLLING = 5;
 
 	/**
 	 * Find element.
@@ -229,7 +221,7 @@ public class ElementOperations extends BrowserFeatures {
 	public void fluentwaitForElementClickable(By by, int timeout, int polling) {
 
 		FluentWait<WebDriver> flu = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeout))
-				.pollingEvery(Duration.ofSeconds(polling)).ignoring(StaleElementReferenceException.class);
+				.pollingEvery(Duration.ofSeconds(polling)).ignoring(ElementClickInterceptedException.class);
 		flu.until(ExpectedConditions.elementToBeClickable(by));
 	}
 
@@ -238,8 +230,20 @@ public class ElementOperations extends BrowserFeatures {
 	 * 
 	 * @param element
 	 */
-	public void jsClick(WebElement element) {
+	public void jsClick(By by) {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeScript("arguments[0].click();", element);
+		executor.executeScript("arguments[0].click();", findElement(by));
+	}
+	
+	public void scrollToElement(By by){
+		WebElement element = driver.findElement(By.xpath("//*[@class='banner--image']//following::a[@href='/speisekarte/mamacita/wallenstein/' and @class='button-home is--primary'][2]"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	//	js.executeScript("javascript:window.scrollBy(250,350)");
+		//js.executeScript("arguments[0].scrollIntoView(true);", element);
+		/*Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		actions.perform();*/
+	//	element.sendKeys(Keys.PAGE_DOWN);
+	//	Thread.sleep(500); 
 	}
 }

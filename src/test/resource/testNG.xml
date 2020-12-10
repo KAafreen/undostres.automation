@@ -3,7 +3,7 @@
 	<parameter name="browser" value="Chrome" />
 	<test name="Verify recharge cellular">
 		<classes>
-			<class name="Undostres.undostres.automation.mytest" />
+			<class name="HonestFood.honestFood.automation.mytest" />
 		</classes>
 	</test>
 </suite>

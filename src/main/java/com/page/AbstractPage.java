@@ -7,9 +7,7 @@ import com.selenium.utils.ElementOperations;
  * 
  * @author aafreen khan
  */
-public abstract class AbstractPage extends ElementOperations {
+public abstract class AbstractPage extends ElementOperations{
 
-	public abstract boolean confirm();
-
-	public abstract void waitForPageLoad();
+	
 }
